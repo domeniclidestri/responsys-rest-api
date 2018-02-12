@@ -11,5 +11,11 @@ describe('Environment', function () {
         it('should have environment variable RESPONSYS_API_AUTH_END_POINT set', function () {
             assert(process.env.RESPONSYS_API_AUTH_END_POINT)
         })
+        it('should have environment variable RESPONSYS_API_AUTH_STORAGE_FILE set', function () {
+            assert(process.env.RESPONSYS_API_AUTH_STORAGE_FILE)
+        })
+        it('should have environment variable RESPONSYS_API_AUTH_STORAGE_FILE set', function () {
+            assert(process.env.RESPONSYS_API_AUTH_TOKEN_EXPIRY_HOURS)
+        })
     })
 })

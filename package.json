@@ -24,6 +24,8 @@
     "mocha": "^5.0.0"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "moment": "^2.20.1",
     "request": "^2.83.0"
   }
 }
