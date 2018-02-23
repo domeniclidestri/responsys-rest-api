@@ -4,8 +4,7 @@
   "description": "Interface to Responsys REST API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r dotenv/config",
-    "start": "node -r dotenv/config run.js"
+    "test": "mocha -r dotenv/config"
   },
   "repository": {
     "type": "git",

@@ -26,5 +26,8 @@ describe('Environment', function () {
         it('should have environment variable RESPONSYS_API_CONTENT_LIBRARY_FILE_DIR set', function () {
             assert(process.env.RESPONSYS_API_CONTENT_LIBRARY_FILE_DIR)
         })
+        it('should have environment variable RESPONSYS_API_CONTENT_LIBRARY_FILE_DIR set', function () {
+            assert(process.env.RESPONSYS_API_CONTENT_LIBRARY_FILE_DIR)
+        })
     })
 })
