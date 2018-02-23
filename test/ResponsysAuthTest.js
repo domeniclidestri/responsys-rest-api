@@ -1,5 +1,6 @@
 const assert = require('assert')
 const moment = require('moment')
+const fs = require('fs')
 const ResponsysAuth = require('../lib/ResponsysAuth')
 
 describe('ResponsysAuth', function () {
@@ -11,15 +12,22 @@ describe('ResponsysAuth', function () {
         "endPoint": "localhost"
     }
 
-    describe('#writeAuthStorage', function () {
-        it('should write to storage file', function () {
-            assert(ra.writeAuthStorage(auth))
+    describe('#AuthStorage', function () {
+        describe('#writeAuthStorage', function () {
+            it('should write to storage file', function () {
+                assert(ra.writeAuthStorage(auth))
+            })
         })
-    })
 
-    describe('#readAuthStorage', function () {
-        it('should read preserved data from storage file', function () {
-            assert(JSON.stringify(ra.readAuthStorage()) === JSON.stringify(auth))
+        describe('#readAuthStorage', function () {
+            it('should read preserved data from storage file', function () {
+                assert(JSON.stringify(ra.readAuthStorage()) === JSON.stringify(auth))
+            })
+        })
+
+        // Clear storage, for authenticate test
+        after(function() {
+            ra.clearAuthStorage()
         })
     })
 
